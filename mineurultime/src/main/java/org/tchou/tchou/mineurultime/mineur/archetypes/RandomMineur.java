@@ -4,16 +4,18 @@ import java.util.Random;
 
 import org.tchou.tchou.mineurultime.mineur.Mineur;
 import org.tchou.tchou.mineurultime.mineur.MineurAction;
+import org.tchou.tchou.mineurultime.mineur.Position;
 
 public class RandomMineur extends Mineur {
 
 	Random random;
 
-	public RandomMineur() {
-		this(new Random());
+	public RandomMineur(Position position) {
+		this(position, new Random());
 	}
 
-	public RandomMineur(Random random) {
+	public RandomMineur(Position position, Random random) {
+		super(position);
 		this.random = random;
 	}
 

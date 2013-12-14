@@ -18,7 +18,7 @@ public class RandomMineurTest {
 		List<MineurAction> mineurActionsExpected = Arrays.asList(MineurAction.NORTH, MineurAction.WEST, MineurAction.SOUTH, MineurAction.WEST, MineurAction.PICK, MineurAction.DROP, MineurAction.EAST, MineurAction.SHOOT, MineurAction.PICK, MineurAction.NORTH);
 		
 		Random random = new Random(seedRandom);
-		RandomMineur mineur = new RandomMineur(random);
+		RandomMineur mineur = new RandomMineur(null, random);
 
 		List<MineurAction> mineurActions = new ArrayList<MineurAction>();
 		for (int i = 0; i < 10; i++) {
