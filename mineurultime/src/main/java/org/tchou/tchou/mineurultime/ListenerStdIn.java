@@ -6,18 +6,19 @@ import java.util.Scanner;
 
 public class ListenerStdIn {
 	
-	private InputStream in;
+	Scanner scanner;
+//	private InputStream in;
 	
 	public ListenerStdIn(){
-		this.in = System.in;
+		this(System.in);
 	}
 
 	public ListenerStdIn(InputStream in){
-		this.in = in;
+//		this.in = in;
+		scanner = new Scanner(in);
 	}
 
 	public String getNextLine() throws IOException {
-		Scanner scanner = new Scanner(in);
 		return scanner.nextLine();
 	}
 
