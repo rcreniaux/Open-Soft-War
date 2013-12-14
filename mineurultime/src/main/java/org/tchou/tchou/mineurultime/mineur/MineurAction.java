@@ -1,4 +1,4 @@
-package org.tchou.tchou.mineurultime;
+package org.tchou.tchou.mineurultime.mineur;
 
 public enum MineurAction {
 

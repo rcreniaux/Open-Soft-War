@@ -1,4 +1,4 @@
-package org.tchou.tchou.mineurultime;
+package org.tchou.tchou.mineurultime.mine;
 
 public class Mine {
 
@@ -6,10 +6,11 @@ public class Mine {
 	private int hauteur;
 	private int nbDiamants;
 
-	public Mine(int largeur, int hauteur, int nbDiamants) {
-		this.largeur = largeur;
-		this.hauteur = hauteur;
-		this.nbDiamants = nbDiamants;
+	public Mine(String mineProperties, String delimiter) {
+		String[] envValues = mineProperties.split(delimiter);
+		this.largeur = Integer.parseInt(envValues[0]);
+		this.hauteur = Integer.parseInt(envValues[1]);
+		this.nbDiamants = Integer.parseInt(envValues[2]);
 	}
 
 	public int getLargeur() {

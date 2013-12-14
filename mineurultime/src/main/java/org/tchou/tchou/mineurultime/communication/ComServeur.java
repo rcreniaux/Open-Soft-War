@@ -1,20 +1,18 @@
-package org.tchou.tchou.mineurultime;
+package org.tchou.tchou.mineurultime.communication;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class ListenerStdIn {
-	
+public class ComServeur {
+
 	Scanner scanner;
-//	private InputStream in;
-	
-	public ListenerStdIn(){
+
+	public ComServeur() {
 		this(System.in);
 	}
 
-	public ListenerStdIn(InputStream in){
-//		this.in = in;
+	public ComServeur(InputStream in) {
 		scanner = new Scanner(in);
 	}
 
@@ -22,4 +20,7 @@ public class ListenerStdIn {
 		return scanner.nextLine();
 	}
 
+	public void sendCommand(String cmde) {
+		System.out.println(cmde);
+	}
 }
